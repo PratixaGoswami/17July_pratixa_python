@@ -7,4 +7,5 @@ if  len(str) % 4 == 0:
     reversed_s = str[::-1]
     print("Reversed string:", reversed_s)
 else:
-    print("original string:",str)    
+    print("original string:",str)   
+     

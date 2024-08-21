@@ -15,4 +15,4 @@ print(b.count('a'))
 print(b.find('p')) #position check insort index
 print(b.isalpha()) #not allowed space
 print(b.isdigit())
-print(b.)
+

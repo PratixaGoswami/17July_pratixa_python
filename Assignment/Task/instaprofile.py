@@ -1,0 +1,5 @@
+import instaloader
+
+instaloader.Profile[]
+
+
