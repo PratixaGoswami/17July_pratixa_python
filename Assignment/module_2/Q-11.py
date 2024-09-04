@@ -10,7 +10,5 @@ def unique_list(input_list):
         
 
  
-original_list=[1,2,2,3,4,5,6,5,6,5,]  
-result=set(original_list)
-print("original list:",original_list)
-print("list with unique element:",result)
+unique_list([1,2,2,3,4,5,6,5,6,5,]  )
+print(unique_list)

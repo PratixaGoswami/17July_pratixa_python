@@ -1,4 +1,5 @@
 # Global dictionary to store fruit stock
+import os
 fruit_stock = {}
 
 def manager():
@@ -36,27 +37,40 @@ def customer():
             print("Invalid choice, please select a valid option.")
 
 def add_fruit():
+    global fruit_stock
     print("\nADD FRUIT STOCK")
-    fruit = input("Enter Fruit Name: ").capitalize()
-    qty = int(input(f"Enter quantity for {fruit} (in kg): "))
-    price = int(input(f"Enter price per kg for {fruit}: "))
+    n=int(input("How many fruits add in stock:"))
+    x=open("fruits_stock.txt","a")
+    for i in range(n):
+        fruit = input("Enter Fruit Name: ").capitalize()
+        qty = int(input(f"Enter quantity for {fruit} (in kg): "))
+        price = int(input(f"Enter price per kg for {fruit}: "))
 
-    if fruit in fruit_stock:
-        fruit_stock[fruit]['qty'] += qty
-        fruit_stock[fruit]['price'] = price
-    else:
-        fruit_stock[fruit] = {'qty': qty, 'price': price}
+        if fruit in fruit_stock:
+            fruit_stock[fruit]['qty'] += qty
+            fruit_stock[fruit]['price'] = price
+        else:
+            fruit_stock[fruit] = {'qty': qty, 'price': price}
     
-    print(f"{fruit} stock updated successfully!")
+        print(f"{fruit} stock updated successfully!")
+        x.write(f"Fruit: {fruit}, Quantity: {qty} kg, Price: {price} INR/kg\n")
 
 def view_fruit():
+   
     print("\nVIEW FRUIT STOCK")
-    if fruit_stock:
-        for fruit, details in fruit_stock.items():
-            print(f"{fruit} - Quantity: {details['qty']} kg, Price: {details['price']} INR/kg")
+    if not os.path.exists("fruits_stock.txt"):
+        print("No fruits available in stock. The stock file does not exist.")
+        return
+    
+    x=open("fruits_stock.txt", "r")
+    contents = x.read()  
+   
+    if contents:
+        print(contents) 
     else:
         print("No fruits available in stock.")
 
+          
 def update_fruit():
     print("\nUPDATE FRUIT STOCK")
     fruit = input("Enter the fruit name to update: ").capitalize()
@@ -67,7 +81,7 @@ def update_fruit():
         print(f"{fruit} stock updated successfully!")
     else:
         print(f"{fruit} not found in stock.")
-
+    
 # Main Program
 print("WELCOME TO FRUIT MARKET")
 while True:

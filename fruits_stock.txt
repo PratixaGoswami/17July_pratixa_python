@@ -1,0 +1,2 @@
+Fruit: Apple , Quantity: 5 kg, Price: 50 INR/kg
+Fruit: Banana, Quantity: 2 kg, Price: 80 INR/kg

@@ -1,6 +1,6 @@
 id:101
 name:pratixa
-city:amreli
+city:rajot
 id:102
 name:bansi
 city:rajot
