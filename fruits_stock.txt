@@ -1,2 +1,6 @@
 Fruit: Apple , Quantity: 5 kg, Price: 50 INR/kg
 Fruit: Banana, Quantity: 2 kg, Price: 80 INR/kg
+Fruit: Apple, Quantity: 6 kg, Price: 80 INR/kg
+ 2024-09-05 16:04:47.405359Fruit: Banana, Quantity: 9 kg, Price: 40 INR/kg
+ 2024-09-05 16:08:23.573945Fruit: Orange, Quantity: 3 kg, Price: 60 INR/kg
+ 2024-09-05 16:08:23.573945

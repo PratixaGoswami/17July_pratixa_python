@@ -2,6 +2,8 @@ fruit_stock={}
 def add_fruit():
   
     print("\nADD FRUIT STOCK")
+    x=open("fruits.txt","w")
+    
     
     fruit = input("Enter Fruit Name: ").capitalize()
     qty = int(input(f"Enter quantity for {fruit} (in kg): "))
@@ -14,6 +16,7 @@ def add_fruit():
         fruit_stock[fruit] = {'qty': qty, 'price': price}
    
     print(f"{fruit} stock updated successfully!")
+    x.write(f"Fruit: {fruit}, Quantity: {qty} kg, Price: {price} INR/kg\n")
 
 def view_fruit():
     print("\nVIEW FRUIT STOCK")

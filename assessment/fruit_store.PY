@@ -1,5 +1,6 @@
 # Global dictionary to store fruit stock
 import os
+import datetime
 fruit_stock = {}
 
 def manager():
@@ -41,6 +42,7 @@ def add_fruit():
     print("\nADD FRUIT STOCK")
     n=int(input("How many fruits add in stock:"))
     x=open("fruits_stock.txt","a")
+    d=datetime.datetime.now()
     for i in range(n):
         fruit = input("Enter Fruit Name: ").capitalize()
         qty = int(input(f"Enter quantity for {fruit} (in kg): "))
@@ -53,7 +55,7 @@ def add_fruit():
             fruit_stock[fruit] = {'qty': qty, 'price': price}
     
         print(f"{fruit} stock updated successfully!")
-        x.write(f"Fruit: {fruit}, Quantity: {qty} kg, Price: {price} INR/kg\n")
+        x.write(f"Fruit: {fruit}, Quantity: {qty} kg, Price: {price} INR/kg {d}\n")
 
 def view_fruit():
    
@@ -73,6 +75,7 @@ def view_fruit():
           
 def update_fruit():
     print("\nUPDATE FRUIT STOCK")
+    x=open("fruits.txt","w")
     fruit = input("Enter the fruit name to update: ").capitalize()
     if fruit in fruit_stock:
         new_qty = int(input(f"Enter the new quantity for {fruit} (in kg): "))
@@ -81,6 +84,7 @@ def update_fruit():
         print(f"{fruit} stock updated successfully!")
     else:
         print(f"{fruit} not found in stock.")
+        x.write(f"Fruit: {fruit}, Quantity: {new_qty} kg, Price: {new_price} INR/kg\n")
     
 # Main Program
 print("WELCOME TO FRUIT MARKET")
