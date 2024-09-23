@@ -3,6 +3,7 @@
 
     try:
         number = int(input("Enter an odd number: "))
+<<<<<<< HEAD
         if number % 2 == 0:
             print(f"{number} is not an odd number")
         else:
@@ -11,5 +12,14 @@
         print(e)
 
 
+=======
+        if number%2== 0:
+          raise ValueError(f"{number} is not an odd number")
+        else:
+            print(f"{number} is an odd number")
+    except Exception as e:
+        print(e)
+
+>>>>>>> e87b1a4 (completed)
 
     

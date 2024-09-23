@@ -1,4 +1,4 @@
-x=open("table.txt","a")
+# x=open("table.txt","a")
 
 n=int(input("How many store table in file:"))
 for i in range(n):

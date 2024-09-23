@@ -1,4 +1,0 @@
-
-Apple,2,50
-Banana,1,50
-Banana,1,50
