@@ -3,7 +3,6 @@
 
     try:
         number = int(input("Enter an odd number: "))
-<<<<<<< HEAD
         if number % 2 == 0:
             print(f"{number} is not an odd number")
         else:
